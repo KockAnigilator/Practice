@@ -49,6 +49,7 @@
             this.dgvDoctors.Name = "dgvDoctors";
             this.dgvDoctors.Size = new System.Drawing.Size(776, 327);
             this.dgvDoctors.TabIndex = 0;
+            this.dgvDoctors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoctors_CellContentClick);
             // 
             // menuStrip1
             // 

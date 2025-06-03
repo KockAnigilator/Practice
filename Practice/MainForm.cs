@@ -1,8 +1,6 @@
-﻿using Practice;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.OleDb;
-using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Practice
@@ -11,11 +9,16 @@ namespace Practice
     {
         private string connectionString = "";
         private DataSet dataSet = new DataSet();
-        private DataGridView dataGridView = new DataGridView();
 
         public MainForm()
         {
             InitializeComponent();
+
+            // Настройка DataGridView из дизайнера
+            dgvDoctors.ReadOnly = true;
+            dgvDoctors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDoctors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDoctors.AllowUserToAddRows = false;
         }
 
         private void LoadTableList()
@@ -26,7 +29,6 @@ namespace Practice
             {
                 conn.Open();
 
-                // Получаем список таблиц
                 DataTable schemaTable = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
 
                 foreach (DataRow row in schemaTable.Rows)
@@ -48,20 +50,30 @@ namespace Practice
         private void cmbTables_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbTables.SelectedItem == null) return;
-
-            string tableName = cmbTables.SelectedItem.ToString();
-            LoadTableData(tableName);
+            LoadTableData(cmbTables.SelectedItem.ToString());
         }
 
         private void LoadTableData(string tableName)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            try
             {
-                conn.Open();
-                OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT * FROM [{tableName}]", conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView.DataSource = dt;
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT * FROM [{tableName}]", conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    // Используем dgvDoctors из дизайнера
+                    dgvDoctors.DataSource = dt;
+
+                    // Автонастройка ширины столбцов после загрузки данных
+                    dgvDoctors.AutoResizeColumns();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки данных: {ex.Message}");
             }
         }
 
@@ -69,25 +81,47 @@ namespace Practice
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Access Database (*.accdb)|*.accdb";
+                openFileDialog.Filter = "Access Databases (*.accdb, *.mdb)|*.accdb;*.mdb";
                 openFileDialog.Title = "Выберите файл базы данных";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={openFileDialog.FileName};";
+                    string filePath = openFileDialog.FileName;
+                    string ext = System.IO.Path.GetExtension(filePath).ToLower();
+
+                    if (ext == ".accdb")
+                    {
+                        connectionString = $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={filePath};";
+                    }
+                    else if (ext == ".mdb")
+                    {
+                        connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={filePath};";
+                    }
+
                     try
                     {
+                        using (OleDbConnection testConn = new OleDbConnection(connectionString))
+                        {
+                            testConn.Open();
+                        }
+
                         LoadTableList();
                         btnCloseConnection.Enabled = true;
                         btnRefresh.Enabled = true;
                         btnAdd.Enabled = true;
                         btnEdit.Enabled = true;
                         btnDelete.Enabled = true;
-                        MessageBox.Show("Подключение к базе данных успешно установлено!");
+                        MessageBox.Show("Подключение успешно установлено!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Ошибка подключения: {ex.Message}");
+                        string errorMsg = $"Ошибка подключения: {ex.Message}";
+                        if (ex.Message.Contains("ACE.OLEDB"))
+                        {
+                            errorMsg += "\n\nУстановите Microsoft Access Database Engine:\n" +
+                                        "https://www.microsoft.com/en-us/download/details.aspx?id=54920";
+                        }
+                        MessageBox.Show(errorMsg, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -96,14 +130,14 @@ namespace Practice
         private void btnCloseConnection_Click_1(object sender, EventArgs e)
         {
             connectionString = "";
-            dataGridView.DataSource = null;
+            dgvDoctors.DataSource = null;
             cmbTables.Items.Clear();
             btnCloseConnection.Enabled = false;
             btnRefresh.Enabled = false;
             btnAdd.Enabled = false;
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
-            MessageBox.Show("Соединение с базой данных закрыто");
+            MessageBox.Show("Соединение закрыто");
         }
 
         private void btnRefresh_Click_1(object sender, EventArgs e)
@@ -116,18 +150,17 @@ namespace Practice
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView.CurrentRow == null)
+            if (dgvDoctors.CurrentRow == null)
             {
-                MessageBox.Show("Выберите запись для редактирования!");
+                MessageBox.Show("Выберите запись!");
                 return;
             }
 
             string tableName = cmbTables.SelectedItem?.ToString();
-
             if (tableName == "Врачи")
             {
-                int doctorId = Convert.ToInt32(dataGridView.CurrentRow.Cells["id_Врач"].Value);
-                AddForm form = new AddForm(connectionString, doctorId);
+                int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells["id_Врач"].Value);
+                AddForm form = new AddForm(connectionString, id);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     btnRefresh.PerformClick();
@@ -135,7 +168,7 @@ namespace Practice
             }
             else
             {
-                MessageBox.Show("Редактирование для этой таблицы пока не реализовано");
+                MessageBox.Show("Редактирование доступно только для врачей");
             }
         }
 
@@ -144,37 +177,35 @@ namespace Practice
             if (cmbTables.SelectedItem == null) return;
 
             string tableName = cmbTables.SelectedItem.ToString();
-
             if (tableName == "Врачи")
             {
                 AddForm form = new AddForm(connectionString);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    btnRefresh.PerformClick(); // Обновляем данные
+                    btnRefresh.PerformClick();
                 }
             }
             else
             {
-                // Для других таблиц можно использовать универсальную форму
-                MessageBox.Show("Добавление для этой таблицы пока не реализовано");
+                MessageBox.Show("Добавление доступно только для врачей");
             }
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView.CurrentRow == null)
+            if (dgvDoctors.CurrentRow == null)
             {
-                MessageBox.Show("Выберите запись для удаления!");
+                MessageBox.Show("Выберите запись!");
                 return;
             }
 
             string tableName = cmbTables.SelectedItem?.ToString();
-            string idColumn = dataGridView.Columns[0].Name;
-            int id = Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value);
-            string name = dataGridView.CurrentRow.Cells[1].Value?.ToString() ?? "запись";
+            string idColumn = dgvDoctors.Columns[0].Name;
+            int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells[0].Value);
+            string name = dgvDoctors.CurrentRow.Cells[1].Value?.ToString() ?? "запись";
 
-            if (MessageBox.Show($"Вы действительно хотите удалить {name}?",
-                "Подтверждение удаления", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show($"Удалить {name}?", "Подтверждение",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
@@ -190,8 +221,23 @@ namespace Practice
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при удалении: {ex.Message}");
+                    MessageBox.Show($"Ошибка удаления: {ex.Message}");
                 }
+            }
+        }
+
+        // Этот обработчик можно оставить пустым или удалить
+        private void dgvDoctors_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Не требуется для базового функционала
+        }
+
+        // ДОБАВЬТЕ ЭТОТ ОБРАБОТЧИК ДЛЯ ДВОЙНОГО КЛИКА
+        private void dgvDoctors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Клик по строке данных
+            {
+                btnEdit.PerformClick();
             }
         }
     }
