@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25BF61D8-C52B-4FD6-AF3B-A573F7C88EA7}|Practice.DataAccess\\Practice.DataAccess.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.dataaccess\\helper\\dbconnectionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25BF61D8-C52B-4FD6-AF3B-A573F7C88EA7}|Practice.DataAccess\\Practice.DataAccess.csproj|solutionrelative:practice.dataaccess\\helper\\dbconnectionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice.core\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DBE03084-BE11-45D9-B3B9-03A135C12D57}|Practice.Core\\Practice.Core.csproj|solutionrelative:practice.core\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,98 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DbConnectionHelper.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.DataAccess\\Helper\\DbConnectionHelper.cs",
-              "RelativeDocumentMoniker": "Practice.DataAccess\\Helper\\DbConnectionHelper.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.DataAccess\\Helper\\DbConnectionHelper.cs",
-              "RelativeToolTip": "Practice.DataAccess\\Helper\\DbConnectionHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\Program.cs",
+              "RelativeDocumentMoniker": "Practice\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\Program.cs",
+              "RelativeToolTip": "Practice\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:35:18.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Education.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Education.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Education.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Education.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Education.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:27:50.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Position.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Position.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Position.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Position.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:27:19.716Z",
+              "WhenOpened": "2025-06-03T20:15:53.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Specialty.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Specialty.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Specialty.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Specialty.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Specialty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Title": "AddForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs",
+              "RelativeDocumentMoniker": "Practice\\AddForm.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs",
+              "RelativeToolTip": "Practice\\AddForm.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:26:56.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Department.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:26:25.362Z",
+              "WhenOpened": "2025-06-03T19:54:43.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Hospital.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Hospital.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Hospital.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Hospital.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Hospital.cs",
+              "Title": "AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs",
+              "RelativeDocumentMoniker": "Practice\\AddForm.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Practice\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T19:53:42.712Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\Data\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "Practice\\Data\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\Data\\DatabaseHelper.cs",
+              "RelativeToolTip": "Practice\\Data\\DatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:25:53.317Z",
+              "WhenOpened": "2025-06-03T19:37:49.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "Practice.Core\\Models\\Doctor.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice.Core\\Models\\Doctor.cs",
-              "RelativeToolTip": "Practice.Core\\Models\\Doctor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
+              "RelativeDocumentMoniker": "Practice\\MainForm.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
+              "RelativeToolTip": "Practice\\MainForm.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwEoAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T06:23:36.643Z",
+              "WhenOpened": "2025-06-03T19:48:18.28Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
+              "RelativeDocumentMoniker": "Practice\\MainForm.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T19:37:13.071Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]
         }
