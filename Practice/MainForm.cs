@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Practice
@@ -60,20 +62,30 @@ namespace Practice
                 using (OleDbConnection conn = new OleDbConnection(connectionString))
                 {
                     conn.Open();
-                    OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT * FROM [{tableName}]", conn);
+
+                    // Получаем список всех столбцов
+                    DataTable schema = conn.GetSchema("Columns", new[] { null, null, tableName });
+                    List<string> columns = new List<string>();
+                    foreach (DataRow row in schema.Rows)
+                    {
+                        columns.Add($"[{row["COLUMN_NAME"]}]");
+                    }
+
+                    // Формируем запрос с явным указанием столбцов
+                    string query = $"SELECT {string.Join(", ", columns)} FROM [{tableName}]";
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    // Используем dgvDoctors из дизайнера
                     dgvDoctors.DataSource = dt;
-
-                    // Автонастройка ширины столбцов после загрузки данных
                     dgvDoctors.AutoResizeColumns();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка загрузки данных: {ex.Message}");
+                MessageBox.Show($"Ошибка загрузки данных: {ex.Message}", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -157,55 +169,113 @@ namespace Practice
             }
 
             string tableName = cmbTables.SelectedItem?.ToString();
-            if (tableName == "Врачи")
+            string idColumn = GetIdColumnName(tableName);
+            int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells[idColumn].Value);
+
+            // Получаем текущие данные
+            DataRow currentRow = ((DataRowView)dgvDoctors.CurrentRow.DataBoundItem).Row;
+
+            // Открываем универсальную форму
+            AddForm form = new AddForm(
+                connectionString,
+                tableName,
+                currentRow,
+                idColumn
+            );
+
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells["id_Врач"].Value);
-                AddForm form = new AddForm(connectionString, id);
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    btnRefresh.PerformClick();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Редактирование доступно только для врачей");
+                btnRefresh.PerformClick();
             }
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             if (cmbTables.SelectedItem == null) return;
-
             string tableName = cmbTables.SelectedItem.ToString();
-            if (tableName == "Врачи")
+
+            // Правильное создание новой записи
+            DataTable dataTable = new DataTable();
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
             {
-                AddForm form = new AddForm(connectionString);
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    btnRefresh.PerformClick();
-                }
+                conn.Open();
+                OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT TOP 1 * FROM [{tableName}]", conn);
+                adapter.Fill(dataTable);
             }
-            else
+
+            DataRow newRow = dataTable.NewRow();
+
+            // Устанавливаем ID как DBNull для автоинкремента
+            string idColumn = GetIdColumnName(tableName);
+            if (dataTable.Columns.Contains(idColumn))
             {
-                MessageBox.Show("Добавление доступно только для врачей");
+                newRow[idColumn] = DBNull.Value;
+            }
+
+            AddForm form = new AddForm(
+                connectionString,
+                tableName,
+                newRow,
+                idColumn
+            );
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadTableData(tableName);
             }
         }
 
+        // Исправление определения ID колонки
+        private string GetIdColumnName(string tableName)
+        {
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
+                    DataTable schema = conn.GetSchema("Columns", new string[] { null, null, tableName });
+
+                    // Приоритетные варианты названий ID
+                    string[] possibleIds = { "id", "код", "code", "ид" };
+
+                    foreach (DataRow row in schema.Rows)
+                    {
+                        string columnName = row["COLUMN_NAME"].ToString().ToLower();
+                        if (possibleIds.Any(id => columnName.Contains(id)))
+                            return row["COLUMN_NAME"].ToString();
+                    }
+
+                    return schema.Rows[0]["COLUMN_NAME"].ToString();
+                }
+            }
+            catch
+            {
+                return "ID";
+            }
+        }
+
+        // Улучшенное удаление записей
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            if (dgvDoctors.CurrentRow == null)
-            {
-                MessageBox.Show("Выберите запись!");
-                return;
-            }
+            if (dgvDoctors.CurrentRow == null) return;
 
             string tableName = cmbTables.SelectedItem?.ToString();
-            string idColumn = dgvDoctors.Columns[0].Name;
-            int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells[0].Value);
-            string name = dgvDoctors.CurrentRow.Cells[1].Value?.ToString() ?? "запись";
+            string idColumn = GetIdColumnName(tableName);
+            int id = Convert.ToInt32(dgvDoctors.CurrentRow.Cells[idColumn].Value);
 
-            if (MessageBox.Show($"Удалить {name}?", "Подтверждение",
-                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            // Формируем читаемое название записи
+            string recordName = "запись";
+            foreach (DataGridViewCell cell in dgvDoctors.CurrentRow.Cells)
+            {
+                if (!cell.OwningColumn.Name.Equals(idColumn, StringComparison.OrdinalIgnoreCase))
+                {
+                    recordName = cell.Value?.ToString() ?? recordName;
+                    break;
+                }
+            }
+
+            if (MessageBox.Show($"Удалить '{recordName}'?", "Подтверждение",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 try
                 {
@@ -239,6 +309,11 @@ namespace Practice
             {
                 btnEdit.PerformClick();
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
