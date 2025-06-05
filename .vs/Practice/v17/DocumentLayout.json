@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,15 +15,11 @@
       "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\practice\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\practice\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,9 +32,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|solutionrelative:practice\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{819D4793-FA0E-4D1E-8449-7F759111F1F0}|Practice\\Practice.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\documents\\github\\practice\\practice\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -52,8 +49,8 @@
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "Practice\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.Designer.cs",
-              "RelativeToolTip": "Practice\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.Designer.cs*",
+              "RelativeToolTip": "Practice\\MainForm.Designer.cs*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T20:40:33.461Z",
@@ -68,8 +65,7 @@
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\Practice.csproj",
               "RelativeToolTip": "Practice\\Practice.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-03T20:40:10.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T20:40:10.289Z"
             },
             {
               "$type": "Document",
@@ -81,12 +77,11 @@
               "RelativeToolTip": "Practice\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:15:53.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T20:15:53.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AddForm.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs",
               "RelativeDocumentMoniker": "Practice\\AddForm.cs",
@@ -94,8 +89,7 @@
               "RelativeToolTip": "Practice\\AddForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T19:54:43.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T19:54:43.222Z"
             },
             {
               "$type": "Document",
@@ -106,8 +100,7 @@
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Practice\\AddForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T19:53:42.712Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-06-03T19:53:42.712Z"
             },
             {
               "$type": "Document",
@@ -119,30 +112,29 @@
               "RelativeToolTip": "Practice\\Data\\DatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T19:37:49.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T19:37:49.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
               "RelativeDocumentMoniker": "Practice\\MainForm.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
-              "RelativeToolTip": "Practice\\MainForm.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAswMoAAAA5AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs*",
+              "RelativeToolTip": "Practice\\MainForm.cs*",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwMwAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T19:48:18.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs",
               "RelativeDocumentMoniker": "Practice\\MainForm.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Documents\\GitHub\\Practice\\Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "Practice\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T19:37:13.071Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
